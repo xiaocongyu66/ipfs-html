@@ -294,6 +294,14 @@
         <div class="header">
             <h1>📸 xLog 图床工具</h1>
             <p>上传图片到 IPFS，管理您的图片资源</p>
+            <div style="margin-top: 15px;">
+                <a href="https://github.com/afoim/ipfs-html" target="_blank" 
+                   style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 0.9rem; transition: all 0.3s ease;"
+                   onmouseover="this.style.background='rgba(255,255,255,0.3)'" 
+                   onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                    <span style="margin-right: 5px;">⭐</span>开源项目 GitHub
+                </a>
+            </div>
         </div>
 
         <div class="content">
@@ -345,6 +353,19 @@
             </div>
         </div>
     </div>
+
+    <!-- 页面底部 -->
+    <footer style="text-align: center; padding: 20px; color: #666; background: #f8f9fa; margin-top: 20px;">
+        <div style="margin-bottom: 10px;">
+            <span style="margin-right: 10px;">💖 开源项目</span>
+            <a href="https://github.com/afoim/ipfs-html" target="_blank" style="color: #667eea; text-decoration: none; font-weight: 500;">
+                <span style="margin-right: 5px;">⭐</span>GitHub
+            </a>
+        </div>
+        <div style="font-size: 0.9rem; color: #999;">
+            基于 IPFS 的图床工具 | 开源免费使用
+        </div>
+    </footer>
 
     <script>
         // 本地存储键名
@@ -400,9 +421,9 @@
 
         // 上传图片函数
         async function uploadImage(file) {
-            // 检查文件大小（限制为10MB）
-            if (file.size > 10 * 1024 * 1024) {
-                showResult('文件太大，请选择小于10MB的图片', 'error');
+            // 检查文件大小（限制为30MB）
+            if (file.size > 30 * 1024 * 1024) {
+                showResult('文件太大，请选择小于30MB的图片', 'error');
                 return;
             }
 
